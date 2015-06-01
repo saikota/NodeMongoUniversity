@@ -1,0 +1,18 @@
+var MongoClient= require("Mongodb").MongoClient;
+
+MongoClient.connect('mongodb://localhost:27017/test',function(err,db){
+	if(err){console.dir(err)}
+
+	db.collection('names').findOne(function(err,doc){
+	if(err){console.dir(err);}
+
+	console.dir(doc);
+	db.close()
+
+	});
+
+	console.dir(" find One called");
+
+
+
+});
