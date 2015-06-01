@@ -1,0 +1,18 @@
+var express=require('express'),
+    app = express();
+    
+
+    app.get('/',function(req,res){
+
+res.send(" Hello World From Express");
+
+    });
+
+    app.get('*',function(req,res){
+
+    res.send(' Page Not Found, 404');
+    });
+
+    app.listen('9090');
+
+    console.dir(" page you requested is not found");
