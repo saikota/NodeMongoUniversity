@@ -14,7 +14,7 @@ app.set('views',__dirname+'/views')
 
     app.get('*',function(req,res){
 
-    res.send(' Page Not Found, 404');
+    res.render('404',{applicationName:'Eureak Corportate'});
     });
 
     app.listen('9090');
